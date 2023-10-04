@@ -1,0 +1,16 @@
+#LOADLIBES = -L/usr/X11R6/lib -lglut -lXext -lX11 -lm
+LOADLIBES = -framework OpenGL -framework GLUT -lm -arch i386 -arch ppc7400
+#CFLAGS = -O0 -Wall -g -DLINUX64 -mcmodel=large -foptimize-sibling-calls
+CFLAGS = -O0 -Wall -g -DMAC -arch i386 -arch ppc7400 -foptimize-sibling-calls
+all: unmscheme unm_viewer
+
+unmscheme: unmscheme.o
+
+unmscheme.o: complex.h complex.c four1.c macros.h sexpr_types.h svd.c defines.h unmscheme.c
+
+unm_viewer: unm_viewer.o
+
+unm_viewer.o: complex.h complex.c four1.c macros.h sexpr_types.h svd.c defines.h unm_viewer.c
+
+clean:
+	rm unmscheme unm_viewer unmscheme.o unm_viewer.o 
