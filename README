@@ -1,0 +1,20 @@
+Compile unmscheme by typing 'make.'
+
+Documentation for the image processing functions can be found at
+
+http://www.cs.unm.edu/~williams/image-ref.html
+
+Documentation for the Boldt line grouping system can be found at
+
+http://www.cs.unm.edu/~williams/boldt-ref.html
+
+The unmscheme binary was compiled on a desktop with 1.5G of RAM. If
+you have a laptop with 512M of RAM, you should change
+
+#define SEXPRS 110000000
+
+in defines.h to a smaller value.
+
+
+This is out of date, see INSTALL for build details.
+

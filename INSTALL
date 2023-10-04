@@ -1,0 +1,9 @@
+To build unmscheme, run make <PLATFORM NAME>. 
+
+Valid platforms are: 
+    make linux
+    make linux64
+    make mac
+    make win32
+
+Note that the win32 port is still under development. 
